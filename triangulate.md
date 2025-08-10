@@ -46,3 +46,27 @@ Run the script from your command line, providing the path to your input image as
 
 ```bash
 python triangulate.py path/to/your/image.jpg
+```
+### Command-Line Arguments
+
+You can customize the output using several optional arguments:
+
+*   `image_path` (Required): The path to the input image file.
+    
+
+**General Arguments:**
+
+*   `-p`, `--points`: The maximum number of feature points for the general image (excluding faces). Default: `750`.
+    
+*   `-c`, `--colors`: The number of distinct colors for the final clustered color palette. Default: `12`.
+    
+*   `-d`, `--min-dist`: The minimum required distance (in pixels) between general points. A smaller value allows for more, smaller triangles. If not provided, it's calculated automatically.
+    
+
+**Face Detection Arguments:**
+
+*   `--haar-cascade`: Path to the Haar Cascade XML file. **Required to enable face detection.**
+    
+*   `--face-points`: The maximum number of points to add to **each** detected face. Default: `500`.
+    
+*   `--face-min-dist`: The minimum distance (in pixels) between points on faces. Default: `5`.
